@@ -484,6 +484,15 @@ div.blog-entrada-imatge {
     margin-top: 62px;
 }
 
+#engrunes li {
+    display: inline-block;
+}
+
+#engrunes li+li:before {
+    content: ">";
+    padding: 0 8px;
+}
+
 #entrada {
     display: grid;
     grid-template-columns: auto;
