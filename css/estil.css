@@ -251,6 +251,10 @@ footer li:not(:last-child) {
     margin-bottom: 6px;
 }
 
+#xarxes-socials li {
+    display: inline-block;
+}
+
 /* ---------------------------------------------
    footer i header
    --------------------------------------------- */
@@ -791,11 +795,11 @@ div.video-text p {
         text-align: end;
     }
 
-    footer li {
+    #footer-links li {
         display: inline-block;
     }
 
-    footer li+li:before {
+    #footer-links li+li:before {
         content: "|";
         padding: 0 8px;
     }
