@@ -1,0 +1,887 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,600;1,600&display=swap');
+
+:root {
+    --color-text: rgb(0, 59, 74);
+    --color-text-fons-fosc: rgb(255, 255, 255);
+    --color-contrast: rgb(191, 12, 240);
+    --color-contrast-clar: rgb(229, 225, 254);
+    --color-fons-body: rgb(247, 247, 247);
+    --color-gris-textos: rgb(158, 157, 171);
+    --title-font-size: 1.75rem;
+    --title-line-height: 2rem;
+    --smallest-font-size: 0.75rem;
+    --smaller-font-size: 0.82rem;
+    --small-font-size: 0.89rem;
+    --normal-font-size: 1rem;
+    --big-font-size: 1.03rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-fons-body);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+}
+
+/* color del fons blanc */
+.fons-blanc {
+    background-color: var(--color-text-fons-fosc);
+}
+
+/* text en majúscules */
+.majuscules {
+    text-transform: uppercase;
+}
+
+/* vora d'1 píxel amb color contrast clar */
+.vora-contrast-clar {
+    border: solid 1px var(--color-contrast-clar);
+}
+
+/* encapçalaments */
+h1,
+h2 {
+    font-family: 'Noto Serif', serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.3rem;
+    padding: 16px 0;
+}
+
+h2 {
+    font-size: 1.45rem;
+    padding: 10px 0;
+}
+
+/* paràgrafs */
+p {
+    font-size: var(--normal-font-size);
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 16px 0;
+}
+
+/* ---------------------------------------------
+   enllaços
+   --------------------------------------------- */
+a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
+
+a:link,
+a:visited,
+a:focus {
+    color: var(--color-contrast);
+}
+
+a:hover {
+    color: var(--color-text);
+}
+
+/* colors intercanviats */
+a.colors-intercanviats {
+    text-decoration: none;
+}
+
+a.colors-intercanviats:link,
+a.colors-intercanviats:visited,
+a.colors-intercanviats:focus {
+    color: var(--color-text);
+}
+
+a.colors-intercanviats:hover {
+    color: var(--color-contrast);
+}
+
+/* main: botó d’enviament del formulari i els enllaços amb aspecte de botó */
+a.boto {
+    display: inline-block;
+    text-decoration: none;
+}
+
+a.boto,
+input[type=submit] {
+    color: var(--color-text-fons-fosc);
+}
+
+a.boto:link,
+a.boto:visited,
+a.boto:focus,
+input[type=submit] {
+    background-color: var(--color-text);
+}
+
+a.boto:hover,
+input[type=submit]:hover {
+    background-color: var(--color-contrast);
+}
+
+a.interessat,
+input[type=submit] {
+    border-radius: 5px;
+    margin: 16px 0;
+    padding: 8px 12px;
+}
+
+input[type=submit] {
+    border: none;
+    font-size: 0.95rem;
+}
+
+/* blog.html: enllaços a la part inferior de la pàgina */
+#blog-nav a {
+    padding: 8px;
+    text-decoration: none;
+}
+
+#blog-nav a:link,
+#blog-nav a:visited,
+#blog-nav a:focus {
+    background-color: var(--color-fons-body);
+    border: solid 1px var(--color-text);
+    color: var(--color-text);
+}
+
+#blog-nav a.active,
+#blog-nav a:hover {
+    background-color: var(--color-contrast);
+    border: solid 1px var(--color-contrast);
+    color: var(--color-fons-body);
+}
+
+/* footer */
+footer a {
+    text-decoration: none;
+}
+
+footer a:link,
+footer a:visited,
+footer a:focus {
+    color: var(--color-text-fons-fosc);
+}
+
+footer a:hover {
+    color: var(--color-contrast-clar);
+}
+
+/* ---------------------------------------------
+   header
+   --------------------------------------------- */
+header {
+    align-items: center;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 16px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/* header: nav. enllaços "Blog" i "Vídeos" */
+header ul {
+    list-style-type: none;
+}
+
+header li {
+    display: inline-block;
+    font-weight: 700;
+}
+
+header li+li:before {
+    content: "|";
+    padding: 0 16px;
+}
+
+/* ---------------------------------------------
+   footer
+   --------------------------------------------- */
+footer {
+    align-items: center;
+    background-color: var(--color-text);
+    color: var(--color-text-fons-fosc);
+    display: grid;
+    font-size: var(--small-font-size);
+    grid-gap: 15px;
+    grid-template-columns: auto;
+    justify-content: center;
+    padding: 32px 16px 64px 16px;
+    text-align: center;
+    width: 100vw;
+}
+
+/* footer: cel·les de la distribució en graella */
+footer div {
+    vertical-align: middle;
+}
+
+footer div:nth-of-type(2) {
+    order: 3;
+}
+
+footer div:nth-of-type(4) {
+    order: 3;
+}
+
+/* footer: hover imatges xarxes socials */
+#xarxes-socials img:hover {
+    opacity: 0.7;
+}
+
+/* footer: nav. "Política de privadesa", "Política de cookies" i "Avís legal" */
+footer ul {
+    list-style-type: none;
+}
+
+footer li:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+#xarxes-socials li {
+    display: inline-block;
+}
+
+/* ---------------------------------------------
+   footer i header
+   --------------------------------------------- */
+/* footer i header: imatge logo */
+img.logo {
+    height: 52px;
+}
+
+/* ---------------------------------------------
+   contenidors
+   --------------------------------------------- */
+main {
+    flex: 1;
+    /* 88px barra superior fixa */
+    margin-top: 88px;
+}
+
+main img {
+    width: 100%;
+}
+
+.container-index,
+.container-blog,
+.container-entrada,
+.container-video {
+    width: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.container-blog,
+.container-video {
+    /* 88px barra superior fixa */
+    margin-top: calc(88px + 32px);
+}
+
+.container-entrada {
+    margin-bottom: 40px;
+}
+
+/* ---------------------------------------------
+   index.html
+   --------------------------------------------- */
+/* #index-imatge-gran: div amb imatge de fons "hero-image-home.avif" i el paràgraf amb
+                       el text "Vital360: Tenint cura de tu a cada gir de la vida" */
+#index-imatge-gran {
+    display: flex;
+    align-items: center;
+    height: 530px;
+    background-image: url("../img/hero-image-home.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#index-imatge-gran p {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+    max-width: 736px;
+}
+
+/* index-why: div amb el títol "Per què Vital360?" i un div que conté 2 div */
+#index-why {
+    padding-bottom: 49px;
+    padding-top: 32px;
+}
+
+#index-why>div {
+    align-items: baseline;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+/* formulari */
+form {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 9px;
+}
+
+form p {
+    margin: 0 0 8px 0;
+}
+
+#div-proteccio-dades {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 10px;
+}
+
+#div-proteccio-dades p,
+#div-proteccio-dades span {
+    padding: 0;
+    font-size: var(--smallest-font-size);
+    line-height: 1.1rem;
+}
+
+input[type=email],
+input[type=text] {
+    font-size: var(--normal-font-size);
+    border: solid 1px var(--color-contrast-clar);
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: var(--color-gris-textos);
+    display: inline-block;
+    margin: 8px 0;
+    padding: 8px;
+    width: 100%;
+}
+
+/* apartats */
+#llista-apartats {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 16px;
+}
+
+div.apartat {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 0;
+}
+
+div.apartat-imatge figcaption {
+    font-size: 0.66rem;
+    text-align: right;
+}
+
+div.apartat-descripcio {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 8px;
+}
+
+div.apartat-descripcio h2 {
+    padding: 0;
+}
+
+div.contrast-clar {
+    background-color: var(--color-contrast-clar);
+}
+
+div.contrast-clar-index {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+/* ---------------------------------------------
+   blog.html
+   --------------------------------------------- */
+.container-blog h1 {
+    padding-bottom: 32px;
+}
+
+#blog {
+    display: grid;
+    grid-template-columns: auto;
+    box-sizing: border-box;
+    row-gap: 48px;
+}
+
+div.blog-entrada-desc {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 15px;
+    row-gap: 0;
+}
+
+div.blog-entrada-categoria {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+div.blog-entrada-categoria>a {
+    font-size: var(--smaller-font-size);
+    padding: 8px;
+}
+
+div.blog-entrada-copyright {
+    background-color: rgba(255, 255, 255, 0.5);
+    bottom: 12px;
+    font-size: 0.65rem;
+    padding: 2px 5px;
+    position: absolute;
+    right: 10px;
+}
+
+.desc-autor {
+    font-size: var(--small-font-size);
+    color: var(--color-gris-textos)
+}
+
+div.blog-entrada-desc-titol a {
+    font-family: 'Noto Serif', serif;
+    font-size: var(--title-font-size);
+    line-height: var(--title-line-height);
+}
+
+div.blog-entrada-desc-link a:after {
+    content: "\00a0\00a0\003e";
+    /* \00a0 Non-breaking space */
+    /* \003e Greater than */
+}
+
+div.blog-entrada-imatge {
+    position: relative;
+}
+
+#blog-nav {
+    align-content: center;
+    display: grid;
+    gap: 16px;
+    grid-auto-flow: column;
+    justify-content: center;
+    padding-top: 73px;
+    padding-bottom: 150px;
+}
+
+/* ---------------------------------------------
+   entrada.html
+   --------------------------------------------- */
+#engrunes {
+    font-size: var(--small-font-size);
+    margin-bottom: 32px;
+    margin-top: 62px;
+}
+
+#engrunes li {
+    display: inline-block;
+}
+
+#engrunes li+li:before {
+    content: ">";
+    padding: 0 8px;
+}
+
+#entrada {
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: 148px;
+    row-gap: 32px;
+}
+
+#entrada-esquerra {
+    padding: 16px;
+}
+
+h1#entrada-titol {
+    font-size: 2.59rem;
+    line-height: 3.1rem;
+}
+
+#entrada-esquerra-imatge-text {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 8px 12px 20px 12px;
+    row-gap: 16px;
+}
+
+#entrada-esquerra-text h2 {
+    font-size: 2rem;
+}
+
+h1#entrada-titol,
+#entrada-esquerra-text h2,
+#entrada-esquerra-text p {
+    padding: 0;
+}
+
+#entrada-esquerra-text ol,
+#entrada-esquerra-text ul {
+    margin-block-start: 8px;
+    margin-block-end: 8px;
+    padding-inline-start: 23px;
+}
+
+#entrada-esquerra-text li {
+    line-height: 1.5rem;
+}
+
+#entrada-esquerra-text li:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+#entrada-esquerra-text-introduccio {
+    padding: 32px 0 !important;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+/* blockquote */
+blockquote {
+    border-left: 4px solid var(--color-contrast);
+    padding-left: 32px;
+    margin: 16px 0;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+blockquote p:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+/* plafó lateral */
+#plafo-lateral {
+    align-content: flex-start;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 16px;
+}
+
+div.plafo-lateral-titol {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 16px 0;
+    text-transform: capitalize;
+}
+
+/* recents */
+#llista-recents {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-flow: row;
+    row-gap: 30px;
+}
+
+div.recent-post-img-div {
+    position: relative;
+}
+
+div.recent-post-category {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+div.recent-post-category>a {
+    font-size: var(--small-font-size);
+    padding: 8px;
+}
+
+div.entrada-dreta-recents-post-text {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 6px 10px 12px 10px;
+    row-gap: 4px;
+}
+
+div.entrada-dreta-recents-post-text-titol {
+    font-family: 'Noto Serif', serif;
+    font-size: 1.2rem;
+}
+
+/* #llista-categories */
+#llista-categories {
+    align-items: start;
+    gap: 11px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#llista-categories div {
+    flex: 0;
+}
+
+#llista-categories a {
+    display: inline-block;
+    font-size: var(--smaller-font-size);
+    text-decoration: none;
+    padding: 4px;
+    white-space: nowrap;
+}
+
+#llista-categories a:link,
+#llista-categories a:visited,
+#llista-categories a:focus {
+    background-color: var(--color-text-fons-fosc);
+    border: solid 1px var(--color-text);
+    color: var(--color-text);
+}
+
+#llista-categories a:hover {
+    background-color: var(--color-contrast);
+    border: var(--color-contrast);
+    color: var(--color-text-fons-fosc);
+}
+
+/* ---------------------------------------------
+   video.html
+   --------------------------------------------- */
+.container-video h1 {
+    margin: 16px 0;
+}
+
+#llista-videos {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 48px;
+    margin-bottom: 136px;
+    margin-top: 8px;
+}
+
+.video-container {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    width: 100%;
+}
+
+.video-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+div.video-desc {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 8px;
+    margin: 18px 15px 30px 15px;
+}
+
+div.video-titol {
+    font-family: 'Noto Serif', serif;
+    font-size: var(--title-font-size);
+    line-height: var(--title-line-height);
+    font-weight: 700;
+}
+
+div.video-text p {
+    margin: 0;
+}
+
+/* ---------------------------------------------
+   responsible tablet -> desktop
+   --------------------------------------------- */
+@media screen and (min-width: 865px) {
+
+    /* header: pàgina activa */
+    header a.active {
+        color: var(--color-contrast) !important;
+    }
+
+    /* index.html */
+    #index-why form {
+        max-width: 580px;
+    }
+
+    #llista-apartats {
+        row-gap: 32px;
+    }
+
+    div.apartat {
+        align-items: center;
+        grid-column-gap: 4vw;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    div.apartat:nth-child(1) div.apartat-imatge figure,
+    div.apartat:nth-child(3) div.apartat-imatge figure {
+        transform: rotate(-5deg);
+    }
+
+    div.apartat:nth-child(1) div.apartat-descripcio,
+    div.apartat:nth-child(3) div.apartat-descripcio {
+        grid-column: 2 / span 2;
+    }
+
+    div.apartat:nth-child(2) div.apartat-imatge,
+    div.apartat:nth-child(4) div.apartat-imatge {
+        order: 2;
+    }
+
+    div.apartat:nth-child(2) div.apartat-imatge figure,
+    div.apartat:nth-child(4) div.apartat-imatge figure {
+        transform: rotate(5deg);
+    }
+
+    div.apartat:nth-child(2) div.apartat-descripcio,
+    div.apartat:nth-child(4) div.apartat-descripcio {
+        grid-column: 1 / span 2;
+    }
+
+    /* blog.html */
+    #blog,
+    /* videos.html */
+    #llista-videos {
+        column-gap: 48px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* entrada.html */
+    #llista-recents {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 32px;
+    }
+}
+
+/* ---------------------------------------------
+   responsible desktop
+   --------------------------------------------- */
+@media screen and (min-width: 1200px) {
+
+    /* contenidors */
+    .container-index,
+    .container-entrada {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+        width: 1108px;
+    }
+
+    header,
+    footer,
+    .container-blog,
+    .container-video {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    /* footer */
+    footer {
+        box-sizing: border-box;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        padding-top: 32px;
+        padding-bottom: 64px;
+    }
+
+    footer div:nth-of-type(3) {
+        order: 3;
+    }
+
+    footer div:nth-of-type(odd) {
+        text-align: start;
+    }
+
+    footer div:nth-of-type(even) {
+        text-align: end;
+    }
+
+    #footer-links li {
+        display: inline-block;
+    }
+
+    #footer-links li+li:before {
+        content: "|";
+        padding: 0 8px;
+    }
+
+    /* elements estàndard */
+    h1 {
+        font-size: 3rem;
+    }
+
+    p,
+    #entrada-esquerra-text li {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+
+    /* index.html */
+    #index-imatge-gran {
+        height: 535px;
+    }
+
+    #index-imatge-gran p {
+        font-size: 4rem;
+    }
+
+    #index-why>div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 70px;
+    }
+
+    a.interessat {
+        margin: 16px 0px;
+    }
+
+    div.apartat-descripcio h2 {
+        font-size: 2rem;
+    }
+
+    div.apartat-descripcio p {
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+    }
+
+    /* blog.html */
+    #blog {
+        column-gap: 48px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    div.blog-entrada:first-child {
+        grid-column: 1 / span 2;
+    }
+
+    /* entrada.html */
+    #entrada {
+        column-gap: 64px;
+        grid-template-columns: 720px 324px;
+    }
+
+    blockquote {
+        margin-left: 48px;
+    }
+
+    #llista-recents {
+        grid-template-columns: auto;
+        row-gap: 32px;
+    }
+
+    /* videos.html */
+    #llista-videos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .video-text {
+        font-size: 1.2rem;
+    }
+}
