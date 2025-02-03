@@ -4,6 +4,7 @@
   "description": "En aquesta PAC es construirà el prototip d'un lloc web sobre cura personal, salut i benestar.",
   "main": "index.js",
   "scripts": {
+    "format": "prettier ./src --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,7 +22,6 @@
     "prettier": "^3.4.2"
   },
   "devDependencies": {
-    "@awmottaz/prettier-plugin-void-html": "^1.7.0",
     "@eslint/js": "^9.19.0",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",

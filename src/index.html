@@ -1,186 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ca">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pàgina principal de Vital360</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.png">
-    <link rel="stylesheet" href="css/estil.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="css/estil.css" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y7WSRT4S3"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-        gtag('config', 'G-9Y7WSRT4S3');
+      gtag('config', 'G-9Y7WSRT4S3');
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="fons-blanc">
-        <div>
-            <a href="index.html"><img src="img/logoVital360.svg" alt="logo image" class="logo"></a>
-        </div>
-        <div>
-            <nav role="navigation" aria-label="Principal">
-                <ul>
-                    <li><a href="blog.html" class="colors-intercanviats majuscules">Blog</a></li>
-                    <li><a href="videos.html" class="colors-intercanviats majuscules">Vídeos</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div>
+        <a href="index.html"><img src="img/logoVital360.svg" alt="logo image" class="logo" /></a>
+      </div>
+      <div>
+        <nav role="navigation" aria-label="Principal">
+          <ul>
+            <li><a href="blog.html" class="colors-intercanviats majuscules">Blog</a></li>
+            <li><a href="videos.html" class="colors-intercanviats majuscules">Vídeos</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
-        <div id="index-imatge-gran">
-            <div class="container-index">
-                <p>Vital360: Tenint cura de tu a cada gir de la vida</p>
-            </div>
+      <div id="index-imatge-gran">
+        <div class="container-index">
+          <p>Vital360: Tenint cura de tu a cada gir de la vida</p>
         </div>
-        <div id="index-why" class="container-index">
-            <h1>Per què Vital360?</h1>
-            <div>
-                <div class="index-why-desc">
-                    <p>En un món cada vegada més accelerat, la <strong>cura personal</strong>, la <strong>salut</strong> i el <strong>benestar</strong> s'han convertit en aspectes fonamentals d'una vida plena i equilibrada.</p>
-                    <p>Atendre les nostres necessitats físiques, mentals i emocionals no és un luxe, sinó una necessitat vital per mantenir un <strong>equilibri a les nostres vides</strong>. En cuidar de nosaltres mateixos, no només millorem la nostra qualitat de vida, sinó que també incrementem la nostra capacitat per afrontar els desafiaments diaris i gaudir plenament de cada moment.</p>
-                    <p>El benestar integral és, per tant, un viatge continu i gratificant cap al descobriment i manteniment del nostre millor jo. <strong>Vital360</strong> vol acompanyar-te en el trajecte.</p>
+      </div>
+      <div id="index-why" class="container-index">
+        <h1>Per què Vital360?</h1>
+        <div>
+          <div class="index-why-desc">
+            <p>En un món cada vegada més accelerat, la <strong>cura personal</strong>, la <strong>salut</strong> i el <strong>benestar</strong> s'han convertit en aspectes fonamentals d'una vida plena i equilibrada.</p>
+            <p>Atendre les nostres necessitats físiques, mentals i emocionals no és un luxe, sinó una necessitat vital per mantenir un <strong>equilibri a les nostres vides</strong>. En cuidar de nosaltres mateixos, no només millorem la nostra qualitat de vida, sinó que també incrementem la nostra capacitat per afrontar els desafiaments diaris i gaudir plenament de cada moment.</p>
+            <p>El benestar integral és, per tant, un viatge continu i gratificant cap al descobriment i manteniment del nostre millor jo. <strong>Vital360</strong> vol acompanyar-te en el trajecte.</p>
+          </div>
+          <div>
+            <form onsubmit="return alert(`Gràcies «${document.getElementById('username').value}» per registrar el correu «${document.getElementById('usermail').value}» a la newslatter!`)">
+              <div>
+                <p>
+                  Per estar al dia, <strong>subscriu-te a la nostra <em>newsletter</em></strong>
+                </p>
+              </div>
+              <div class="field">
+                <label for="username">
+                  <span>Nom:</span>
+                </label>
+                <input type="text" name="name" id="username" placeholder="Escriu el teu nom" minlength="3" maxlength="64" pattern="[a-zA-Z'\-\s]+" title="Text de 3 a 64 caràcters, incloent l'apostrof i el guió" required />
+              </div>
+              <div class="field">
+                <label for="usermail">
+                  <span>Correu electrònic:</span>
+                </label>
+                <input type="email" name="email" id="usermail" placeholder="Escriu el teu e-mail" required />
+              </div>
+              <div id="div-proteccio-dades">
+                <div>
+                  <p>INFORMACIÓ SOBRE PROTECCIÓ DE DADES DE <strong>Vital360</strong>. <strong>Finalitats</strong>: recollida de dades per a l'enviament del butlletí electrònic. <strong>Legitimació</strong>: consentiment de l'interessat. <strong>Destinataris</strong>: no hi són previstes cessions de dades a tercers, excepte obligació legal. <strong>Drets</strong>: podeu retirar el vostre consentiment en qualsevol moment, així com accedir, rectificar, suprimir les vostres dades i altres drets dirigint-vos a <a href="mailto:info@vital360.com">info@vital360.com</a>. <strong>Informació Addicional</strong>: podeu ampliar la informació a l'enllaç d'<a href="#" target="_blank">Avís legal</a> i <a href="#" target="_blank">Política de privadesa</a>.</p>
                 </div>
                 <div>
-                    <form onsubmit="return alert(`Gràcies «${document.getElementById('username').value}» per registrar el correu «${document.getElementById('usermail').value}» a la newslatter!`)">
-                        <div>
-                            <p>Per estar al dia, <strong>subscriu-te a la nostra <em>newsletter</em></strong></p>
-                        </div>
-                        <div class="field">
-                            <label for="username">
-                                <span>Nom:</span>
-                            </label>
-                            <input type="text" name="name" id="username" placeholder="Escriu el teu nom" minlength="3" maxlength="64" pattern="[a-zA-Z'\-\s]+" title="Text de 3 a 64 caràcters, incloent l'apostrof i el guió" required>
-                        </div>
-                        <div class="field">
-                            <label for="usermail">
-                                <span>Correu electrònic:</span>
-                            </label>
-                            <input type="email" name="email" id="usermail" placeholder="Escriu el teu e-mail" required>
-                        </div>
-                        <div id="div-proteccio-dades">
-                            <div>
-                                <p>INFORMACIÓ SOBRE PROTECCIÓ DE DADES DE <strong>Vital360</strong>. <strong>Finalitats</strong>: recollida de dades per a l'enviament del butlletí electrònic. <strong>Legitimació</strong>: consentiment de l'interessat. <strong>Destinataris</strong>: no hi són previstes cessions de dades a tercers, excepte obligació legal. <strong>Drets</strong>: podeu retirar el vostre consentiment en qualsevol moment, així com accedir, rectificar, suprimir les vostres dades i altres drets dirigint-vos a <a href="mailto:info@vital360.com">info@vital360.com</a>. <strong>Informació Addicional</strong>: podeu ampliar la informació a l'enllaç d'<a href="#" target="_blank">Avís legal</a> i <a href="#" target="_blank">Política de privadesa</a>.</p>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="privacity" id="userprivacity" required>
-                                <label for="userprivacity" id="privacity-label">
-                                    <span>He llegit i accepto la política de privacitat</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div>
-                            <input type="submit" value="Subscriu-me a la newsletter" class="majuscules">
-                        </div>
-                    </form>
+                  <input type="checkbox" name="privacity" id="userprivacity" required />
+                  <label for="userprivacity" id="privacity-label">
+                    <span>He llegit i accepto la política de privacitat</span>
+                  </label>
                 </div>
-            </div>
+              </div>
+              <div>
+                <input type="submit" value="Subscriu-me a la newsletter" class="majuscules" />
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="contrast-clar contrast-clar-index">
-            <div id="llista-apartats" class="container-index">
-                <div class="apartat">
-                    <div class="apartat-imatge">
-                        <figure>
-                            <img src="img/home-bloc1.avif" alt="© Dovile Ramoskaite, a Unsplash">
-                            <figcaption>© Dovile Ramoskaite, a Unsplash</figcaption>
-                        </figure>
-                    </div>
-                    <div class="apartat-descripcio">
-                        <div>
-                            <h2>Nutrició i alimentació saludables</h2>
-                        </div>
-                        <div>
-                            <p>Descobreix com una nutrició adequada pot transformar la teva salut. Consells pràctics sobre dietes balancejades, receptes saludables i la importància dels nutrients.</p>
-                        </div>
-                        <div><a href="#" class="boto majuscules interessat">M'interessa</a></div>
-                    </div>
-                </div>
-
-                <div class="apartat">
-                    <div class="apartat-imatge">
-                        <figure>
-                            <img src="img/home-bloc2.avif" alt="© Logan Weaver, a Unsplash">
-                            <figcaption>© Logan Weaver, a Unsplash</figcaption>
-                        </figure>
-                    </div>
-                    <div class="apartat-descripcio">
-                        <div>
-                            <h2>Exercici i activitat física</h2>
-                        </div>
-                        <div>
-                            <p>L'exercici físic és clau per a un estil de vida saludable. Explora rutines de <em>fitness</em>, consells per mantenir-se actiu i descobreix com l'exercici beneficia ment i cos.</p>
-                        </div>
-                        <div><a href="#" class="boto majuscules interessat">M'interessa</a></div>
-                    </div>
-                </div>
-
-                <div class="apartat">
-                    <div class="apartat-imatge">
-                        <figure>
-                            <img src="img/home-bloc3.avif" alt="© Le Minh Phuong, a Unsplash">
-                            <figcaption>© Le Minh Phuong, a Unsplash</figcaption>
-                        </figure>
-                    </div>
-                    <div class="apartat-descripcio">
-                        <div>
-                            <h2>Benestar mental</h2>
-                        </div>
-                        <div>
-                            <p>El teu benestar mental és tan important com la teva salut física. Aprèn sobre tècniques de relaxació, <em>mindfulness</em> i estratègies per manejar l'estrès.</p>
-                        </div>
-                        <div><a href="#" class="boto majuscules interessat">M'interessa</a></div>
-                    </div>
-                </div>
-
-                <div class="apartat">
-                    <div class="apartat-imatge">
-                        <figure>
-                            <img src="img/home-bloc4.avif" alt="© Bluewater Sweden, a Unsplash">
-                            <figcaption>© Bluewater Sweden, a Unsplash</figcaption>
-                        </figure>
-                    </div>
-                    <div class="apartat-descripcio">
-                        <div>
-                            <h2>Consells per a un estil de vida saludable</h2>
-                        </div>
-                        <div>
-                            <p>Petits canvis poden marcar una gran diferència. Descobreix com millorar el teu son, mantenir una hidratació adequada i equilibrar la teva vida quotidiana.</p>
-                        </div>
-                        <div><a href="#" class="boto majuscules interessat">M'interessa</a></div>
-                    </div>
-                </div>
+      </div>
+      <div class="contrast-clar contrast-clar-index">
+        <div id="llista-apartats" class="container-index">
+          <div class="apartat">
+            <div class="apartat-imatge">
+              <figure>
+                <img src="img/home-bloc1.avif" alt="© Dovile Ramoskaite, a Unsplash" />
+                <figcaption>© Dovile Ramoskaite, a Unsplash</figcaption>
+              </figure>
             </div>
+            <div class="apartat-descripcio">
+              <div>
+                <h2>Nutrició i alimentació saludables</h2>
+              </div>
+              <div>
+                <p>Descobreix com una nutrició adequada pot transformar la teva salut. Consells pràctics sobre dietes balancejades, receptes saludables i la importància dels nutrients.</p>
+              </div>
+              <div><a href="#" class="boto majuscules interessat">M'interessa</a></div>
+            </div>
+          </div>
+
+          <div class="apartat">
+            <div class="apartat-imatge">
+              <figure>
+                <img src="img/home-bloc2.avif" alt="© Logan Weaver, a Unsplash" />
+                <figcaption>© Logan Weaver, a Unsplash</figcaption>
+              </figure>
+            </div>
+            <div class="apartat-descripcio">
+              <div>
+                <h2>Exercici i activitat física</h2>
+              </div>
+              <div>
+                <p>L'exercici físic és clau per a un estil de vida saludable. Explora rutines de <em>fitness</em>, consells per mantenir-se actiu i descobreix com l'exercici beneficia ment i cos.</p>
+              </div>
+              <div><a href="#" class="boto majuscules interessat">M'interessa</a></div>
+            </div>
+          </div>
+
+          <div class="apartat">
+            <div class="apartat-imatge">
+              <figure>
+                <img src="img/home-bloc3.avif" alt="© Le Minh Phuong, a Unsplash" />
+                <figcaption>© Le Minh Phuong, a Unsplash</figcaption>
+              </figure>
+            </div>
+            <div class="apartat-descripcio">
+              <div>
+                <h2>Benestar mental</h2>
+              </div>
+              <div>
+                <p>El teu benestar mental és tan important com la teva salut física. Aprèn sobre tècniques de relaxació, <em>mindfulness</em> i estratègies per manejar l'estrès.</p>
+              </div>
+              <div><a href="#" class="boto majuscules interessat">M'interessa</a></div>
+            </div>
+          </div>
+
+          <div class="apartat">
+            <div class="apartat-imatge">
+              <figure>
+                <img src="img/home-bloc4.avif" alt="© Bluewater Sweden, a Unsplash" />
+                <figcaption>© Bluewater Sweden, a Unsplash</figcaption>
+              </figure>
+            </div>
+            <div class="apartat-descripcio">
+              <div>
+                <h2>Consells per a un estil de vida saludable</h2>
+              </div>
+              <div>
+                <p>Petits canvis poden marcar una gran diferència. Descobreix com millorar el teu son, mantenir una hidratació adequada i equilibrar la teva vida quotidiana.</p>
+              </div>
+              <div><a href="#" class="boto majuscules interessat">M'interessa</a></div>
+            </div>
+          </div>
         </div>
+      </div>
     </main>
     <footer>
-        <div>
-            <a href="index.html"><img src="img/logoVital360-n.svg" alt="logo image" class="logo"></a>
-        </div>
-        <div id="xarxes-socials">
-            <ul>
-                <li><a href="#" target="_blank"><img src="img/twitter.svg" alt="X"></a></li>
-                <li><a href="#" target="_blank"><img src="img/instagram.svg" alt="instagram"></a></li>
-                <li><a href="#" target="_blank"><img src="img/youtube.svg" alt="youtube"></a></li>
-            </ul>
-        </div>
-        <div>
-            2023-2024 | Robert Buj Gelonch
-        </div>
-        <div>
-            <nav role="navigation" aria-label="Avisos legals">
-                <ul id="footer-links">
-                    <li><a href="#" target="_blank">Política de privadesa</a></li>
-                    <li><a href="#" target="_blank">Política de cookies</a></li>
-                    <li><a href="#" target="_blank">Avís legal</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div>
+        <a href="index.html"><img src="img/logoVital360-n.svg" alt="logo image" class="logo" /></a>
+      </div>
+      <div id="xarxes-socials">
+        <ul>
+          <li>
+            <a href="#" target="_blank"><img src="img/twitter.svg" alt="X" /></a>
+          </li>
+          <li>
+            <a href="#" target="_blank"><img src="img/instagram.svg" alt="instagram" /></a>
+          </li>
+          <li>
+            <a href="#" target="_blank"><img src="img/youtube.svg" alt="youtube" /></a>
+          </li>
+        </ul>
+      </div>
+      <div>2023-2024 | Robert Buj Gelonch</div>
+      <div>
+        <nav role="navigation" aria-label="Avisos legals">
+          <ul id="footer-links">
+            <li><a href="#" target="_blank">Política de privadesa</a></li>
+            <li><a href="#" target="_blank">Política de cookies</a></li>
+            <li><a href="#" target="_blank">Avís legal</a></li>
+          </ul>
+        </nav>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
