@@ -4,5 +4,7 @@
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "editor.formatOnSave": true,
+  // Configures if the built-in HTML language suggests HTML5 tags, properties and values.
+  "html.suggest.html5": true,
   "cSpell.words": ["Bluewater", "Dovile", "Dungan", "Martín", "Minh", "Phuong", "Ramoskaite", "Sofía", "Spassov", "Thao", "Thom"]
 }
