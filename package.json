@@ -1,0 +1,20 @@
+{
+  "name": "m4.252-pac3",
+  "version": "1.0.0",
+  "description": "En aquesta PAC es construirà el prototip d'un lloc web sobre cura personal, salut i benestar.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbuj-UOC/M4.252-PAC3.git"
+  },
+  "author": "Robert Buj <rbuj@uoc.edu>",
+  "license": "CC0-1.0",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/rbuj-UOC/M4.252-PAC3/issues"
+  },
+  "homepage": "https://github.com/rbuj-UOC/M4.252-PAC3#readme"
+}
