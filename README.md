@@ -1,3 +1,5 @@
+[![Deploy static content to Pages](https://github.com/rbuj-UOC/M4.252-PAC3/actions/workflows/static.yml/badge.svg)](https://github.com/rbuj-UOC/M4.252-PAC3/actions/workflows/static.yml)
+
 # PAC3
 
 En aquesta PAC es construirà el prototip d'un lloc web sobre cura personal, salut i benestar.
